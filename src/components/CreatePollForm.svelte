@@ -1,6 +1,8 @@
 <script>
+    import { createEventDispatcher } from 'svelte';
     import Button from '../shared/Button.svelte';
 
+    let dispatch = createEventDispatcher();
     // instead of creating a separate variable for each input create an object with properties for each input
     let fields = { question: '', answerA: '', answerB: '' };
     let errors = { question: '', answerA: '', answerB: '' };
@@ -36,7 +38,8 @@
 
         // add poll
         if (valid) {
-            console.log('valid', fields);
+            let poll = {...fields, votesA: 0, votesB: 0, id: Math.random()};
+            dispatch('add', poll);
         }
     }
 </script>
