@@ -1,4 +1,6 @@
 <script>
+    import Button from '../shared/Button.svelte';
+
     // instead of creating a separate variable for each input create an object with properties for each input
     let fields = { question: '', answerA: '', answerB: '' };
 
@@ -22,7 +24,8 @@
         <label for="answer-b">Answer B:</label>
         <input type="text" id="answer-b" bind:value={fields.answerB}>
     </div>
-    <button>Add Poll</button>
+    <!-- whatever is between button tag will show up in the "slot" in Button component -->
+    <Button type="secondary" flat={true}>Add Poll</Button>
 </form>
 
 <style>
