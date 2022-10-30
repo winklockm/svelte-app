@@ -30,6 +30,24 @@
 		console.log(polls);
 		activeItem = 'Current Polls';
 	}
+
+	const handleVote = (e) => {
+		const {id, option} = e.detail;
+		// copy polls into new array
+		let copiedPolls = [...polls];
+		// get reference to poll we want to update from that new array
+		let upvotedPoll = copiedPolls.find((poll) => poll.id === id);
+		// find out if we need to update A or B
+		if (option === 'a') {
+			upvotedPoll.votesA++;
+		}
+		if (option === 'b') {
+			upvotedPoll.votesB++;
+		}
+
+		polls = copiedPolls;
+		
+	}
 </script>
 
 <Header />
@@ -39,7 +57,7 @@
 	<Tabs {activeItem} {items} on:tabChange={tabChange}/>
 	<!-- show different components based on activeItem selected -->
 	{#if activeItem === 'Current Polls'}
-		<PollList {polls} />
+		<PollList {polls} on:vote={handleVote} />
 	{:else if activeItem === 'Add New Poll'}
 		<CreatePollForm on:add={handleAdd} />
 	{/if}
