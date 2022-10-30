@@ -12,18 +12,6 @@
 		activeItem = e.detail;  //e.detail is what we sent along in Tabs.svelte
 	}
 
-	// polls
-	let polls = [
-		{
-			id: 1,
-			question: 'Trick or Treat?',
-			answerA: 'Trick',
-			answerB: 'Treat',
-			votesA: 3,
-			votesB: 5
-		},
-	];
-
 	const handleAdd = (e) => {
 		const poll = e.detail;
 		polls = [poll, ...polls];
@@ -57,7 +45,7 @@
 	<Tabs {activeItem} {items} on:tabChange={tabChange}/>
 	<!-- show different components based on activeItem selected -->
 	{#if activeItem === 'Current Polls'}
-		<PollList {polls} on:vote={handleVote} />
+		<PollList on:vote={handleVote} />
 	{:else if activeItem === 'Add New Poll'}
 		<CreatePollForm on:add={handleAdd} />
 	{/if}
