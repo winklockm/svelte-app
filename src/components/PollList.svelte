@@ -9,7 +9,7 @@
 <div class="poll-list">
     <!-- // $PollStore here subscribes on mount AND unsubscribes on destroy -->
     {#each $PollStore as poll (poll.id)}
-        <div><PollDetails {poll} on:vote/></div>
+        <div><PollDetails {poll} /></div>
     {/each}
 </div>
 
