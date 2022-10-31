@@ -6,7 +6,7 @@
 
 <style>
     header {
-        background: #f7f7f7;
+        background: #FF8F2D;
         padding: 20px;
     }
     h1 {
@@ -14,7 +14,9 @@
         text-align: center;
     }
     img {
-        max-width: 100px;
-        max-height: 100px;
+        max-width: 200px;
+        max-height: 200px;
+        border-radius: 20%;
+        border: 5px solid #DE6B07;
     }
 </style>

@@ -74,12 +74,12 @@
         box-sizing: border-box;
     }
     .percent-a {
-        border-left: 4px solid #d91b42;
-        background: rgba(217,27,66,0.2);
+        border-left: 4px solid #BC4B0D;
+        background: rgba(188,75,13,0.2);
     }
     .percent-b {
-        border-left: 4px solid #45c495;
-        background: rgba(69,196,150,0.2);
+        border-left: 4px solid #395F60;
+        background: rgba(57,95,96,0.2);
     }
 
 </style>

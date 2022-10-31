@@ -5,6 +5,7 @@ html, body {
 }
 
 body {
+	background: rgb(254, 254, 254);
 	color: #333;
 	margin: 0;
 	box-sizing: border-box;

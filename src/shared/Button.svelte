@@ -19,24 +19,24 @@
         box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
     }
     .primary {
-        background-color: #d91b42;
+        background-color: #DE6B07;
         color: white;
     }
     .secondary {
-        background: #45c496;
+        background: #395F60;
         color: white;
     }
     .flat {
         box-shadow: none;
     }
     .primary.inverse {
-        color: #d91b42;
+        color: #DE6B07;
         background: white;
-        border: 2px solid #d91b42;
+        border: 2px solid #DE6B07;
     }
     .secondary.inverse {
-        color: #45c496;
+        color: #395F60;
         background: white;
-        border: 2px solid #45c496;
+        border: 2px solid #395F60;
     }
 </style>
